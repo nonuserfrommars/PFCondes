@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap');
+
+body {
+    font-size:15px;
+    font-family: 'Source Code Pro', monospace;
+    background: rgb(11, 7, 7);
+    color:rgb(239, 239, 239);
+    height:100vh;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index:1;
+    display: flex;
+    width:100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width:100%;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin: 0 1rem;
+    padding: 1em;
+}
+
+.navbar ul li a{
+    text-transform: uppercase;
+    text-decoration:none;
+    color:#f4f4f4;
+    justify-content:center;
+}
+
+.navbar ul li a:hover{
+    color:skyblue;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:left;
+    text-align: left;
+    width:100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+section p {
+    font-size:1.5rem;
+}
+
+#sistema-solar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+#sistema-solar li{
+    font-size: 0.50em;
+    justify-content: center;
+}
+.__sistemasolar{
+
+}
+
+.sol {
+    width:150px;
+    height:150px;
+    background: yellow;
+    border-radius:50%;
+    box-shadow: 0 0 20px yellow, 0 0 60px rgb(225, 82, 0);
+
+}
+
+.mercurio {
+    width: 30px;
+    height: 30px;
+    background:grey;
+    border-radius:50%;
+    box-shadow:0 0 20px grey, 0 0 60px white;
+    animation: rotating-anim 1s linear infinite;
+}
+
+.venus {
+    width:25px;
+    height:25px;
+    background:orange;
+    border-radius: 50%;
+    box-shadow: 0 0 20px orange, 0 0 60px rgb(251, 186, 65);
+    animation: rotating-anim 2.5s linear infinite;
+}
+
+.tierra {
+    width:20px;
+    height:20px;
+    background:rgb(21, 188, 2);
+    border-radius:50%;
+    box-shadow:0 0 20px rgb(21, 188, 21), 0 0 60px rgb(112, 112, 250);
+    animation: rotating-anim 3s linear infinite;
+}
+
+.marte {
+    width:18px;
+    height:18px;
+    background: rgb(255, 77, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(255, 77, 0), 0 0 60px rgb(255, 133, 80);
+    animation: rotating-anim 4.5s linear infinite;
+}
+
+.jupiter {
+    width: 50px;
+    height: 50px;
+    background: rgb(243, 211, 146);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(243, 211, 146), 0 0 60px rgb(236, 220, 188);
+    animation: rotating-anim 9.5s linear infinite;
+}
+
+
+.saturno {
+    width: 40px;
+    height: 40px;
+    background: rgb(251, 186, 65);
+    border-radius:50%;
+    box-shadow: 0 0 20px rgb(251, 186, 65), 0 0 60px rgb(250, 206, 125);
+}
+
+.urano {
+    width: 20px;
+    height:20px;
+    background: rgb(36, 194, 215);
+    border-radius:50%;
+    box-shadow: 0 0 20px rgb(36, 194, 215), 0 0 60px rgb(136, 241, 255);
+}
+
+.neptuno {
+    width:19px;
+    height:19px;
+    border-radius:50%;
+    background:rgb(0, 0, 138);
+    box-shadow: 0 0 20px rgb(0, 0, 138), 0 0 60pppx rgb(26, 26, 255)
+}
+
+#planetas {
+    align-items:flex-start;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:100%;
+}
+#planetas h2{
+    align-items:center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#planetas p{
+    align-items: flex-start;
+    font-size: 1em
+}
+
+
+#galeria{
+    align-items:flex-start;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:100%;
+}
+
+#galeria img{
+    align-items:flex-start;
+    font-size: 1em;
+}
+.__galeria{
+    align-items: center;
+
+}
+
+
+
+#libros{
+    align-items:flex-start;
+}
+.__libros{
+
+}
+
+
+
+#proximamente{
+    align-items:flex-start;
+}
+.__proximamente{
+    text-transform: uppercase;
+}
+
+.footer{
+    
+}
