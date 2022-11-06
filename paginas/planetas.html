@@ -9,58 +9,100 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="paginas.css">
+    <link href= "bootstrap/css/bootstrap.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/index.html">Sistema solar</a></li>
-            <li><a href="/paginas/planetas.html"></a>Los planetas</a></li>
-            <li><a href="/paginas/galeria.html">Galeria</a></li>
-            <li><a href="/paginas/libros.html">Libros</a></li>
-            <li><a href="/paginas/webb.html">James Webb</a></li>
-        </ul>
-    </nav>
-    <h1>LOS PLANETAS Y EL SOL</h1>
+    <nav class="navbar navbar-customclass navbar-expand-sm">  
+        <a class="navbar-brand" >SISTEMA SOLAR</a>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">  
+        <span class="navbar-toggler-icon"></span>  
+        </button>  
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">  
+        <ul class="navbar-nav">  
+        <li class="nav-item">  
+        <a class="nav-link" href="/index.html">Sistema solar</a>  
+        </li>  
+        <li class="nav-item">  
+        <a class="nav-link" href="/paginas/planetas.html">Planetas</a>  
+        </li>  
+        <li class="nav-item">  
+        <a class="nav-link" href="/paginas/galeria.html">Galeria</a>  
+        </li>    
+        <li class="nav-item">  
+        <a class="nav-link" href="/paginas/libros.html">Libros</a>  
+        </li>    
+        <li class="nav-item">  
+        <a class="nav-link" href="/paginas/webb.html">James Webb</a>  
+        </li>    
+        </ul>  
+        </div>   
+    </nav> 
+    <h2>LOS PLANETAS Y EL SOL</h2>
     <section id="planetas">
         <div class="__planetas">
-        <h3>EL SOL </h3>
-        <img src="img0/sol" alt="imagen sol">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
-
-        <h3>MERCURIO</h3>
-        <img src="img0/mercurio" alt="imagen mercurio">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>VENUS</h3>
-        <img src="img0/venus" alt="imagen venus">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>TIERRA</h3>
-        <img src="img0/tierra" alt="imagen tierra">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>MARTE</h3>
-        <img src="img0/marte" alt="imagen marte">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>JUPITER</h3>
-        <img src="img0/jupiter" alt="imagen jupiter">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>SATURNO</h3>
-        <img src="img0/saturno" alt="imagen saturno">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>URANO</h3>
-        <img src="img0/urano" alt="imagen urano">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-
-        <h3>NEPTUNO</h3>
-        <img src="img0/neptuno" alt="imagen neptuno">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium.</p>
-    </div>   
-    </section>
+            <div class="row">
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/son.png"  alt="imagen sol">
+        <div class=".col-sm-4 ">
+        <p class="title text-center"><h3>EL SOL</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/merkuri.png" alt="imagen mercurio" >
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>MERCURIO</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/vinus.png" alt="imagen venus" 
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>VENUS</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/erf.png" alt="imagen tierra" >
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>LA TIERRA</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/marz.png" alt="imagen marte">
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>MARTE</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/jupirer.png" alt="imagen jupiter">
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>JUPITER</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/saterern.png" alt="imagen saturno" >
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>SATURNO</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/ioreines.png" alt="imagen urano" >
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>URANO</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+            <div class=".col-sm-4 text-center ">
+        <img src="imgg/nepten.png" alt="imagen neptuno" >
+        <div class=".col-sm-4">
+        <p class="title text-center"><h3>NEPTUNO</h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sem in fermentum tempor. Praesent sed odio et ligula dignissim auctor. Sed congue auctor ante sit amet pretium</p>
+        </div>
+        </div>
+    </div>     
+</div>
+</section>
     <footer id="footer">
         <ul class="iconos">
             <li><a href="#"><ion-icon name="mail"></ion-icon></a></li>

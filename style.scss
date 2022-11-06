@@ -1,0 +1,299 @@
+$sm: 576px;  $md: 768px;  $lg: 992px;  $xl: 1200px; 
+
+$letra:#ffff;
+$background:#12121e;
+$sol:radial-gradient(ellipse at center, #ffde49 1%,#f9aa00 39%,#ffce48 39%,#ff751f 100%) ;    $t-sol:40px;
+$mercurio:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(193,174,78,0.647887323943662) 52%, rgba(15,124,161,1) 100%);                             $t-mercurio:4px;  $o-mercurio:70px;
+$venus:  linear-gradient(90deg, rgba(36,0,0,1) 5%, rgba(255,152,0,0.647887323943662) 50%, rgba(255,237,0,0.7161988375479715) 100%);               $t-venus:8px;     $o-venus:100px;  
+$tierra: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(53,255,0,0.647887323943662) 21%, rgba(0,53,255,0.7161988375479715) 100%, rgba(0,53,255,1) 100%, rgba(0,53,255,0.7161988375479715) 100%);   $t-tierra:6px;    $o-tierra:145px;
+$marte:	linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(147,98,0,1) 0%, rgba(159,153,141,1) 70%, rgba(255,255,255,1) 100%);   $t-marte:5px;     $o-marte:190px;
+$jupiter: linear-gradient(0deg, rgba(96,180,181,1) 0%, rgba(184,161,113,1) 100%, rgba(253,187,45,1) 227%); $t-jupiter:18px;  $o-jupiter:340px;	
+$saturno: linear-gradient(0deg, rgba(117,95,63,1) 0%, rgba(250,238,148,1) 100%, rgba(218,199,159,1) 227%);  $t-saturno:12px;  $o-saturno:440px;	 
+$urano:  radial-gradient(circle, rgba(199,228,242,1) 0%, rgba(63,147,249,1) 100%);   $t-urano:10px;    $o-urano:630px;
+$neptuno:  radial-gradient(circle, rgba(58,185,246,1) 0%, rgba(0,90,179,1) 71%, rgba(0,111,246,1) 100%);  $t-neptuno:3px;   $o-neptuno:780px;
+$orbita:#7e7fa877;
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap');
+
+@function revolution($pl-year-in-days){
+	@return $pl-year-in-days * $year-in-second/ 365.2563 + s  
+}
+$year-in-second : 30;
+@function alphaRandom(){
+	@return random(1000)*.001;
+}
+
+@function stars($s, $max-area, $min-area : 0, $star-size : 0) {
+	$stars : #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, alphaRandom()); 
+	@for $i from 1 to $s{
+	$stars:'#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'; 
+	}
+	@return unquote($stars);
+}
+
+@mixin sm {
+	@media screen and (max-width: ($sm)) {
+	@content;
+	}
+}
+@mixin md {
+	@media screen and (max-width: ($md)) {
+	@content;
+	}
+}
+@mixin lg {
+	@media screen and (max-width: ($lg)) {
+	@content;
+	}
+}
+@mixin xl {
+	@media screen and (max-width: ($xl)) {
+	@content;
+	}
+}
+
+*, *:before, *:after{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+html, body{
+	height:100%;
+	width:100%;
+}
+body{
+	font: normal 1em/1.45em "Source Code pro", monospace, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color:$letra;
+	background: radial-gradient(ellipse at bottom, $background 0%, #050608 100%);
+	background-attachment: fixed;
+}
+
+.navbar-customclass {
+    background-color: black;
+
+    .navbar-brand, .navbar-text {
+    color: #ffffff;
+    }
+
+    .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    }
+    .nav-item {
+    &.active .nav-link, &:hover .nav-link {
+        color: skyblue;
+    }
+    }
+}
+
+h1{
+	font-weight:300;
+	font-size:2.5em;
+	text-transform:uppercase;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height:1.6em;
+	letter-spacing:.1em;
+}
+.sistema-solar{
+	&:after{
+		content:"";
+		position:absolute;
+		width:2px;
+		height:2px;
+		top:-2px;
+		background:$letra;
+		box-shadow:stars(500, 1800);
+		border-radius:100px;
+	}
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	position:relative;
+	
+	div{
+		top:50%;
+		left:50%;
+		border-radius:1000px;
+		position:absolute;
+		z-index:999;
+		&:not(.sol){
+			border:1px solid $orbita;
+			&:before{
+				left:50%;
+				content:"";
+				position:absolute;
+				border-radius:100px;
+			}
+		}
+	}
+}
+.sol{
+	background: $sol;
+	height:$t-sol;
+	width: $t-sol;
+	margin-top: -$t-sol / 2;
+	margin-left: -$t-sol /2;
+	border:0 !important;
+	background-position: -28px -130px;
+	background-clip: padding-box;
+	background-size:175%;
+	box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);;
+}
+
+.mercurio{
+	height:$o-mercurio;
+	width:$o-mercurio;
+	margin-top: -$o-mercurio / 2;
+	margin-left: -$o-mercurio / 2;
+	animation: orb revolution(87.5) linear infinite;
+	&:before{
+		height:$t-mercurio;
+		width:$t-mercurio;
+		background:$mercurio;
+		margin-top: -$t-mercurio / 2;
+		margin-left: -$t-mercurio / 2;
+	}
+}
+
+.venus {
+	height: $o-venus;
+	width:$o-venus;
+	margin-top: -$o-venus / 2;
+	margin-left: -$o-venus / 2;
+	animation: orb revolution(224.7) linear infinite;
+	&:before{
+	background:$venus;
+	margin-top: -$t-venus / 2;
+	margin-left: -$t-venus / 2;
+	height:$t-venus;
+	width:$t-venus;
+	}
+}
+
+.tierra {
+	height: $o-tierra;
+	width: $o-tierra;
+	margin-top: -$o-tierra / 2;
+	margin-left: -$o-tierra / 2;
+	animation: orb revolution( 365.2563) linear infinite;
+	&:before{
+		background: $tierra;
+		height: $t-tierra;
+		width:$t-tierra;
+		margin-top:-$t-tierra / 2 ;
+		margin-left: -$t-tierra / 2;
+	}
+	&:after{
+		position:absolute;
+		content:"";
+		height:18px;
+		width:18px;
+		left:50%;
+		margin-top:-9px;
+		top:0px;
+		margin-left:-9px;
+		border-radius:100px;
+		box-shadow:0 -10px 0 -8px grey;
+		animation: orb revolution(27.3216) linear infinite;
+	}
+}
+
+.marte {
+	height: $o-marte;
+	width:$o-marte;
+	margin-top: -$o-marte / 2;
+	margin-left: -$o-marte / 2;
+	animation: orb revolution(687) linear infinite;
+	&:before{
+	background:$marte;
+	margin-top: -$t-marte / 2;
+	margin-left: -$t-marte / 2;
+	height:$t-marte;
+	width:$t-marte;
+	}
+}
+
+.jupiter {
+	height: $o-jupiter;
+	width:$o-jupiter;
+	margin-top: -$o-jupiter / 2;
+	margin-left: -$o-jupiter / 2;
+	animation: orb revolution(4331) linear infinite;
+	&:before{
+	background: $jupiter;
+	margin-top: -$t-jupiter / 2;
+	margin-left: -$t-jupiter / 2;
+	height:$t-jupiter;
+	width:$t-jupiter;
+	}
+}
+
+.saturno {
+	height: $o-saturno;
+	width:$o-saturno;
+	margin-top: -$o-saturno / 2;
+	margin-left: -$o-saturno/ 2;
+	animation: orb revolution(10747) linear infinite;
+	&:before {
+	background: $saturno;
+	margin-top:-$t-saturno / 2;
+	margin-left: -$t-saturno/ 2;
+	height:$t-saturno;
+	width:$t-saturno
+	}
+	&:after {
+		position:absolute;
+		content:"";
+		height:2.32%;
+		width:4.676%;
+		left:50%;
+		top:0;
+		transform: rotateZ(-52deg);
+		margin-top:-1.2%;
+		margin-left:-2.3%;
+		border-radius: 50% 50% 50% 50%;
+		box-shadow: 0 1px 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
+		animation: orb revolution(10747) linear infinite;
+		animation-direction: reverse;
+		transform-origin: 52% 60%;
+	}
+}
+
+.urano{
+	height: $o-urano;
+	width:$o-urano;
+	margin-top: -$o-urano / 2;
+	margin-left: -$o-urano / 2;
+	animation: orb revolution(30589) linear infinite;
+	&:before{
+	background: $urano;
+	margin-top: -$t-urano / 2;
+	margin-left: -$t-urano / 2;
+	height:$t-urano;
+	width:$t-urano;
+	}
+}
+
+.neptuno{
+	height: $o-neptuno;
+	width:$o-neptuno;
+	margin-top: -$o-neptuno / 2;
+	margin-left: -$o-neptuno / 2;
+	animation: orb revolution(59802) linear infinite;
+	&:before{
+	background: $neptuno;
+	margin-top: -$t-neptuno / 2;
+	margin-left: -$t-neptuno / 2;
+	height:$t-neptuno;
+	width:$t-neptuno;
+	}
+}
+
+@keyframes orb{
+	from {
+	transform:rotate(0deg)
+	}
+	to{
+	transform:rotate(-360deg)
+	}
+}

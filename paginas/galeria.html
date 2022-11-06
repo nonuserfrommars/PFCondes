@@ -9,52 +9,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="paginas.css">
+    <link href= "bootstrap/css/bootstrap.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</head>
 </head>
 <body>
-    <div class="container">
-        <div class="col-xs- -col-sm -col-md-">
-    <nav class="navbar">
-        <ul>
-            <li><a href="/index.html">Sistema solar</a></li>
-            <li><a href="/paginas/planetas.html">Los planetas</a></li>
-            <li><a href="/paginas/galeria.html">Galeria</a></li>
-            <li><a href="/paginas/libros.html">Libros</a></li>
-            <li><a href="/paginas/webb.html">James Webb</a></li>
-        </ul>
-    </nav>
-    <h1>GALERIA</h1>
-        <div class="container-fluid">
-            <div class="row"> 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-left: 0px;  padding-right: 0px;">
-                <img src="imgg/sol.jpg"  class="img-fluid" alt="imagen del sol">
-                <img src="imgg/mercurio.png"  class="img-fluid" alt= "imagen de mercurio">
-                <img src="imgg/venus.jpg"  class="img-fluid" alt= "imagen de venus">
-                <img src="imgg/tierra.jpg"  class="img-fluid" alt= "imagen de la tierra">
-                <img src="imgg/luna.jpg"  class="img-fluid" alt= "imagen de la luna">
-                <img src="imgg/marte.jpg"  class="img-fluid"alt= "imagen de marte" >
-                <img src="imgg/vialactea.jpg"  class="img-fluid"alt= "imagen de la via lactea" >
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <img src="imgg/jupiter.jpg"  class="img-fluid"alt= "imagen de jupiter" >
-                <img src="imgg/saturno.jpg"  class="img-fluid" alt= "imagen de saturno">
-                <img src="imgg/solar-system.jpg"  class="img-fluid" alt= "imagen del sistema solar">
-                <img src="imgg/neptuno.jpg"  class="img-fluid" alt= "imagen de neptuno">
-                <img src="imgg/urano.jpg"  class="img-fluid" alt= "imagen de urano">
-                </div>
-            </div>
-            </div>
-    <footer id="footer">
+    <nav class="navbar navbar-customclass navbar-expand-sm">  
+        <a class="navbar-brand" >SISTEMA SOLAR</a>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">  
+                <span class="navbar-toggler-icon"></span>  
+                </button>  
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">  
+                    <ul class="navbar-nav">  
+                        <li class="nav-item">  
+                            <a class="nav-link" href="/index.html">Sistema solar</a>  
+                        </li>  
+                        <li class="nav-item">  
+                            <a class="nav-link" href="/paginas/planetas.html">Planetas</a>  
+                        </li>  
+                        <li class="nav-item">  
+                            <a class="nav-link" href="/paginas/galeria.html">Galeria</a>  
+                        </li>    
+                        <li class="nav-item">  
+                            <a class="nav-link" href="/paginas/libros.html">Libros</a>  
+                        </li>    
+                        <li class="nav-item">  
+                            <a class="nav-link" href="/paginas/webb.html">James Webb</a>  
+                        </li>    
+                </ul>  
+            </div>   
+    </nav> 
+<div class="container">
+    <h1 class="heading">Galeria <span> del sistema solar</span></h1>
+        <div class="galeria">
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/luna.jpg" alt="imagen luna">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/saturno.jpg" alt="imagen saturno">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/sol.jpg" alt="imagen sol">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/mercurio.png" alt="imagen mercurio">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/solar-system.jpg" alt="imagen sistema solar">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/marte.jpg" alt="imagen marte ">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/tierra.jpg" alt=" imagen tierra">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/venus.jpg" alt=" imagen venus">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/vialactea.jpg" alt=" imagen via lactea">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/neptuno.jpg" alt=" imagen neptuno">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/jupiter.jpg" alt=" imagen jupiter">
+        </div>
+        <div class="galeria-item">
+            <img class="galeria-imagen" src="imgg/urano.jpg" alt=" imagen urano">
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <p>Made with <a href ="#"><ion-icon name="heart"></ion-icon></a> by NatC</p>
         <ul class="iconos">
             <li><a href="#"><ion-icon name="mail"></ion-icon></a></li>
             <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
         </ul>
-    </footer>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
-    </script>
-    </div>
-    </div>
+</footer>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+</script>
+
 </body>
 </html>

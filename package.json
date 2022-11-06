@@ -1,0 +1,27 @@
+{
+"name": "natalia",
+"version": "1.0.0",
+"main": "index.js",
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    },
+    "author": "Natalia",
+    "license": "ISC",
+    "devDependencies": {
+    "node-sass": " ^1.14.11 "
+    },
+    "description": "preentregacondes3",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonuserfrommars/PreEntrega1Condes.git"
+    },
+    "keywords": [
+    "mipinguinomanolo"
+    ],
+    "bugs": {
+    "url": "https://github.com/nonuserfrommars/PreEntrega1Condes/issues"
+    },
+    "homepage": "https://github.com/nonuserfrommars/PreEntrega1Condes#readme"
+}
