@@ -1,0 +1,568 @@
+@import "mixin";
+@import "variables";
+@import "h2";
+@import "footer";
+@import url("https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap");
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height:100vh;
+}
+body{
+  font: normal 1em/1.45em "Source Code pro", monospace;	
+  -webkit-font-smoothing: antialiased;
+  background: $background ;
+  background-attachment: fixed;
+  color:$letra;
+  
+}
+
+.navbar-toggler
+.navbar-toggler-icon{
+	color:$letra;
+}
+.custom-toggler.navbar-toggler {
+  border-color: skyblue !important;
+}
+.navbar-customclass {
+  background-color: black;
+  .navbar-brand,
+  .navbar-text {
+    color: #ffffff;
+  }
+  .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .nav-item {
+    &.active .nav-link,
+    &:hover .nav-link {
+      color: skyblue;
+    }
+  }
+}
+h1 {
+  font-weight: 300;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.6em;
+  letter-spacing: 0.1em;
+}
+.sistema-solar {
+  &:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: -2px;
+    box-shadow: stars(500, 1800);
+    border-radius: 100px;
+  }
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  div {
+    top: 50%;
+    left: 50%;
+    border-radius: 1000px;
+    position: absolute;
+    justify-content: center;
+    z-index: 999;
+    &:not(.sol) {
+      border: 1px solid $orbita;
+      &:before {
+        left: 50%;
+        content: "";
+        position: absolute;
+        border-radius: 100px;
+      }
+    }
+  }
+}
+.sol {
+  background: $sol;
+  height: $t-sol;
+  width: $t-sol;
+  margin-top: -$t-sol / 2;
+  margin-left: -$t-sol / 2;
+  border: 0 !important;
+  background-position: -28px -130px;
+  background-clip: padding-box;
+  background-size: 175%;
+  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4),
+    0 0 22px 11px rgba(255, 203, 0, 0.13);
+}
+
+.mercurio {
+  height: $o-mercurio;
+  width: $o-mercurio;
+  margin-top: -$o-mercurio / 2;
+  margin-left: -$o-mercurio / 2;
+  animation: orb revolution(87.6) linear infinite;
+  &:before {
+    height: $t-mercurio;
+    width: $t-mercurio;
+    background: $mercurio;
+    margin-top: -$t-mercurio / 2;
+    margin-left: -$t-mercurio / 2;
+  }
+}
+
+.venus {
+  height: $o-venus;
+  width: $o-venus;
+  margin-top: -$o-venus / 2;
+  margin-left: -$o-venus / 2;
+  animation: orb revolution(224.7) linear infinite;
+  &:before {
+    background: $venus;
+    margin-top: -$t-venus / 2;
+    margin-left: -$t-venus / 2;
+    height: $t-venus;
+    width: $t-venus;
+  }
+}
+
+.tierra {
+  height: $o-tierra;
+  width: $o-tierra;
+  margin-top: -$o-tierra / 2;
+  margin-left: -$o-tierra / 2;
+  animation: orb revolution(365.2563) linear infinite;
+  &:before {
+    background: $tierra;
+    height: $t-tierra;
+    width: $t-tierra;
+    margin-top: -$t-tierra / 2;
+    margin-left: -$t-tierra / 2;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 50%;
+    margin-top: -9px;
+    top: 0px;
+    margin-left: -9px;
+    border-radius: 100px;
+    box-shadow: 0 -10px 0 -8px grey;
+    animation: orb revolution(27.3216) linear infinite;
+  }
+}
+
+.marte {
+  height: $o-marte;
+  width: $o-marte;
+  margin-top: -$o-marte / 2;
+  margin-left: -$o-marte / 2;
+  animation: orb revolution(687) linear infinite;
+  &:before {
+    background: $marte;
+    margin-top: -$t-marte / 2;
+    margin-left: -$t-marte / 2;
+    height: $t-marte;
+    width: $t-marte;
+  }
+}
+
+.jupiter {
+  height: $o-jupiter;
+  width: $o-jupiter;
+  margin-top: -$o-jupiter / 2;
+  margin-left: -$o-jupiter / 2;
+  animation: orb revolution(4331) linear infinite;
+  &:before {
+    background: $jupiter;
+    margin-top: -$t-jupiter / 2;
+    margin-left: -$t-jupiter / 2;
+    height: $t-jupiter;
+    width: $t-jupiter;
+  }
+}
+
+.saturno {
+  height: $o-saturno;
+  width: $o-saturno;
+  margin-top: -$o-saturno / 2;
+  margin-left: -$o-saturno/ 2;
+  animation: orb revolution(10747) linear infinite;
+  &:before {
+    background: $saturno;
+    margin-top: -$t-saturno / 2;
+    margin-left: -$t-saturno/ 2;
+    height: $t-saturno;
+    width: $t-saturno;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2.32%;
+    width: 4.676%;
+    left: 50%;
+    top: 0;
+    transform: rotateZ(-52deg);
+    margin-top: -1.2%;
+    margin-left: -2.3%;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
+    animation: orb revolution(10747) linear infinite;
+    animation-direction: reverse;
+    transform-origin: 52% 60%;
+  }
+}
+
+.urano {
+  height: $o-urano;
+  width: $o-urano;
+  margin-top: -$o-urano / 2;
+  margin-left: -$o-urano / 2;
+  animation: orb revolution(30589) linear infinite;
+  &:before {
+    background: $urano;
+    margin-top: -$t-urano / 2;
+    margin-left: -$t-urano / 2;
+    height: $t-urano;
+    width: $t-urano;
+  }
+}
+
+.neptuno {
+  height: $o-neptuno;
+  width: $o-neptuno;
+  margin-top: -$o-neptuno / 2;
+  margin-left: -$o-neptuno / 2;
+  animation-name: orb;
+  animation: orb revolution(59802) linear infinite;
+  &:before {
+    background: $neptuno;
+    margin-top: -$t-neptuno / 2;
+    margin-left: -$t-neptuno / 2;
+    height: $t-neptuno;
+    width: $t-neptuno;
+  }
+}
+
+@keyframes orb {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/*PAGINAS*/
+
+/*GALERIA*/
+.galeria {
+	background-color:$background;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+  .col-xl-3.col-md-6.col-sm-12.imggaleria {
+    padding: 0;
+  }
+  .galeria img {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+	@supports (display: grid) {
+		.galeria {
+			display: grid;
+			object-fit: cover;
+			grid-gap: 0;
+		}
+	}
+}
+
+
+
+/*PLANETAS*/
+.planetas .body {
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-out;
+  box-shadow: -0.5vh 0 0.5vh rgba(255, 255, 200, 0.2);
+  .planetas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #010110;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+  }
+  &:hover {
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-image: radial-gradient(circle farthest-corner at 25% 25%, transparent, rgb(0, 0, 0));
+    box-shadow: inset 0 1vh 2vh rgba(255, 255, 200, 0.3),
+      inset 1.5vh -0.5vh 3vh rgba(0, 0, 0, 0.3),
+      inset -4vh -1vh 3vh rgba(0, 0, 0, 0.3);
+  }
+  
+  .handle {
+    position: absolute;
+    top: calc(100% + 2vw);
+    left: 50%;
+    padding: 1vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+    transition: color 0.2s ease-in-out;
+  }
+  &:hover .handle {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.planetas ._sol {
+  width: 30vw;
+  height: 30vw;
+  left: -22vw;
+  background-color: orange;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100%;
+    box-shadow: 0 0 5vw red;
+    animation: sol 5s infinite alternate;
+    filter: blur(3vw);
+  }
+  
+  &:after {
+    background-image: radial-gradient(circle farthest-corner at 25% 25%, transparent, rgba(255, 255, 255, 0.5));
+    box-shadow: 0 0 12vw rgba(254, 198, 83, 0.8),
+      0 0 5vw #fab62d,
+      0 0 2vw #fffebd,
+      inset 0 0 6vw #db570b;
+  }
+}
+
+@keyframes sol {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+._mercurio {
+  width: 0.25vw;
+  height: 0.25vw;
+  left: 16vw;
+  
+  &:after {
+    background-color: gray;
+  }
+}
+
+._venus {
+  width: 1vw;
+  height: 1vw;
+  left: 20vw;
+  
+  &:after {
+    background-color: lightyellow;
+  }
+}
+
+._tierra {
+  width: 1.2vw;
+  height: 1.2vw;
+  left: 24vw;
+  
+  &:after {
+    background-color: royalblue;
+  }
+}
+
+._marte {
+  width: 0.7vw;
+  height: 0.7vw;
+  left: 32vw;
+  
+  &:after {
+    background-color: indianred;
+  }
+}
+
+._jupiter {
+  width: 9vw;
+  height: 9vw;
+  left: 45vw;
+  
+  &:after {
+    background-color: sandybrown;
+    $gradient-stops: rgba(0, 0, 0, 0.1);
+    @for $i from 1 through 30 {
+        $color: hsla(random() * 50, random() * 0.5, random() * 30 + 20, random() * 0.5);
+        $gradient-stops: append($gradient-stops, $color, comma);
+    }
+    background-image: linear-gradient(-16deg, $gradient-stops);
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 3vw rgba(0, 0, 0, 0.7),
+      inset -2vw -2vw 4vw rgba(0, 0, 0, 0.5),
+      inset -0.5vw -0.5vw 1vw rgba(0, 0, 0, 0.5);
+  }
+}
+
+._saturno {
+  width: 6vw;
+  height: 6vw;
+  left: 64vw;
+  
+  &:after {
+    background-color: tan;
+    $gradient-stops: rgba(0, 0, 0, 0.1);
+    @for $i from 1 through 30 {
+        $color: hsla(random() * 50, random() * 0.5, random() * 30 + 20, random() * 0.5);
+        $gradient-stops: append($gradient-stops, $color, comma);
+    }
+    background-image: linear-gradient(-16deg, $gradient-stops);
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 3vw rgba(0, 0, 0, 0.7),
+      inset -2vw -2vw 4vw rgba(0, 0, 0, 0.5),
+      inset -0.5vw -0.5vw 1vw rgba(0, 0, 0, 0.5);
+  }
+  
+  .ring {
+    content: '';
+    position: absolute;
+    top: -15vh;
+    left: -15vh;
+    right: -15vh;
+    bottom: -15vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)),
+      radial-gradient(circle farthest-corner at 50% 50%, transparent 40%, peachpuff 46%, tan, tan, transparent, tan, tan, tan, peachpuff, tan, bisque, bisque, saddlebrown, cornsilk, tan, blanchedalmond, bisque, tan, cornsilk, transparent);
+    border-radius: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 60%);
+    transform: rotateX(77deg) rotateY(-16deg);
+    
+    &.top {
+      z-index: 1;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 0 60%);
+      transform: rotateX(77deg) rotateY(-16deg);
+    }
+  }
+}
+
+._urano {
+  width: 3.5vw;
+  height: 3.5vw;
+  left: 80vw;
+  background-color: cornflowerblue;
+}
+
+._neptuno {
+  width: 3vw;
+  height: 3vw;
+  left: 90vw;
+  background-color: dodgerblue;
+}
+
+.modals {
+  .page {
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    bottom: 3vw;
+    width: 20vw;
+    padding: 1vw;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transform: translateX(-25vw);
+    transition: transform 0.2s ease-in-out;
+    
+    &:target {
+      transform: translateX(0);
+    }
+    
+    &:after {
+      display: block;
+      margin-top: 2vw;
+      content: 'Click to close.';
+    }
+  }
+}
+  /*LIBROS*/
+  .libros {
+    font-family: "Source Code Pro", monospace;
+    h3 {
+      overflow: hidden;
+    }
+  }
+  .libro1,
+  .libro2,
+  .libro3 {
+    background-color: $background;
+    color: $letra;
+  }
+  .libros img {
+    vertical-align:baseline;
+  }
+
+
+  /*WEBB*/
+  .webb {
+    img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 1rem 0 ;
+    }
+    h3 {
+      overflow: hidden;
+      color: $letra;
+      font-weight:bolder;
+      line-height: 1;
+      margin: 0;
+      padding: 1rem 0 ;
+    }
+    p {
+      color: $letra;
+      line-height: 1;
+      margin: 0;
+      padding: 1rem 0 ;
+    }
+  }

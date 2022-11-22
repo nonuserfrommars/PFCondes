@@ -1,0 +1,17 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Source+Code+Pro&display=swap');
+@import "mixin";
+h2{
+  font-family: "Source Code Pro", monospace ; 
+  font-size: 3rem ;
+  font-weight: 600 ;
+  line-height: 1.5 ;
+  -webkit-font-smoothing: antialiased;
+  text-align: center; 
+  padding: 1rem 0 ;
+  color: $letra ;
+  text-transform:uppercase;
+  overflow:hidden;
+  background-color:$background-h2; 
+  margin: 0;
+}

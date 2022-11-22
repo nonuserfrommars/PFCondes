@@ -1,0 +1,47 @@
+
+$sm: 576px;  $md: 768px;  $lg: 992px;  $xl: 1200px; 
+
+$letra:#cecdcd;
+$background: radial-gradient(75% 75% at 50% 50%, #241F31FF 2%, #050608 78%, );
+$detalles: #232323;
+$background-h2: linear-gradient(359deg, 241F31FF 0%,  #050608  100%); 
+$year-in-second: 30;
+$background-span:rgb(55, 48, 75);
+@function revolution($pl-year-in-days) {
+  @return $pl-year-in-days * $year-in-second/ 365.2674 + s;
+}
+
+@function alphaRandom() {
+  @return random(1000) * 0.001;
+}
+
+@function stars($s, $max-area, $min-area: 0, $star-size: 0) {
+  $stars: #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px
+    0 #{$star-size}px rgba(255, 255, 255, alphaRandom());
+  @for $i from 1 to $s {
+    $stars: "#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})";
+  }
+  @return unquote($stars);
+}
+
+$sol:radial-gradient(ellipse at center, #ffde49 1%,#f9aa00 39%,#ffce48 39%,#ff751f 100%) ;    
+$mercurio:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(193,174,78,0.647887323943662) 52%, rgba(15,124,161,1) 100%);                         
+$venus:  linear-gradient(90deg, rgba(36,0,0,1) 5%, rgba(255,152,0,0.647887323943662) 50%, rgba(255,237,0,0.7161988375479715) 100%);             
+$tierra: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(53,255,0,0.647887323943662) 21%, rgba(0,53,255,0.7161988375479715) 100%, rgba(0,53,255,1) 100%, rgba(0,53,255,0.7161988375479715) 100%);   
+$marte:	linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(147,98,0,1) 0%, rgba(159,153,141,1) 70%, rgba(255,255,255,1) 100%);   
+$jupiter: linear-gradient(0deg, rgba(96,180,181,1) 0%, rgba(184,161,113,1) 100%, rgba(253,187,45,1) 227%); 	
+$saturno: linear-gradient(0deg, rgba(117,95,63,1) 0%, rgba(250,238,148,1) 100%, rgba(218,199,159,1) 227%); 	 
+$urano:  radial-gradient(circle, rgba(199,228,242,1) 0%, rgba(63,147,249,1) 100%);   
+$neptuno:  radial-gradient(circle, rgba(58,185,246,1) 0%, rgba(0,90,179,1) 71%, rgba(0,111,246,1) 100%);  
+$orbita:#2e2e4c3c;
+
+
+$t-sol:60px;
+$t-tierra:9.5px;    $o-tierra:155px;
+$t-mercurio:5px;    $o-mercurio:80px;
+$t-venus:9px;       $o-venus:110px;
+$t-marte:7px;       $o-marte:200px;
+$t-jupiter:30px;    $o-jupiter:305px;
+$t-saturno:18px;    $o-saturno:430px;
+$t-urano:14px;      $o-urano:580px;
+$t-neptuno:10px;    $o-neptuno:710px;
