@@ -6,7 +6,7 @@
   height: 2.3rem;
   flex-wrap: wrap;
   margin: 0 auto;
-  font-size: 1em;
+  font-size: 0.7em;
   bottom: 0;
   justify-content: center;
   display: flex;
@@ -24,18 +24,19 @@
 .iconos a {
   color: $letra;
   padding: 1em;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 #footer {
   p {
     a {
-      color: rgba(255, 0, 81, 0.817);
+      color: rgba(169, 3, 55, 0.619);
     }
-    font-weight: 0.5em;
-    color: $letra;
-    font-weight: bolder;
+    font-weight: 0.3em;
+    color: $background-span;
+    font-weight: bold;
     text-transform: lowercase;
+    font-size:0.6rem;
   }
   a:hover {
     color: skyblue;
